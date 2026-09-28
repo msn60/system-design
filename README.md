@@ -37,3 +37,6 @@
   - [Cache Failure Mode: Cache Penetration](03-caching/failure-modes/cache-penetration.md)
   - [Cache Warming](03-caching/cache-warming.md)
   - [TTL Strategy](03-caching/ttl-strategy.md)
+- [Batching and Pagination](04-batching-and-pagination/README.md)
+  - [Batching](04-batching-and-pagination/batching.md)
+  - [Pagination](04-batching-and-pagination/pagination.md)
