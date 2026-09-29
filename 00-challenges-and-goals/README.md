@@ -1,4 +1,4 @@
 # Challenges and Goals
 
-- [چالش‌های اصلی System Design در مقیاس بزرگ](challenges.md)
-- [هدف نهایی یادگیری System Design](learning-goals.md)
+- [Main challenges in System Design in scale](challenges.md)
+- [System Design Final Goal learning](learning-goals.md)

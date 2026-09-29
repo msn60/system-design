@@ -39,6 +39,6 @@
 
 سیستم های بزرگی همچون whatsApp, slack, Trading system, Uber دارای میلیون ها persistent connections هستند. لذا اینکه چطور آن ها را به صورت  real time مورد scale قرار دهیم، بسیار اهمیت خواهند داشت. 
 
-## 8️⃣ consistency داده‌ها چقدر مهم است؟
+## 8️⃣ چقدر consistency داده‌ها مهم است؟
 
 در سیستم‌های توزیع‌شده همیشه tradeoff داریم که عموما از تئوری CAP Theorem پیروی می کند. در واقع یک سیستم توزیع شده نمی تواند همزمان دارای consistency, Availability, partition tolerance باشد. در این مورد هم از مواردی چون Strong Consistency (مانند تراکنش  بانکی) یا Eventual Consistency (لایک های اینستاگرام) استفاده می‌کنیم. 

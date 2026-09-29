@@ -10,4 +10,4 @@ Thumbs.db
 .claude/settings.local.json
 
 # Local-only chat prompts (not published)
-meta/
+meta-data/

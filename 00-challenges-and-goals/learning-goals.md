@@ -8,11 +8,11 @@
 
 - مشکل سیستم چیست؟
 - بیشترین فشار کجاست؟
-- Latency مهم‌تر است یا consistency؟
+- آیا Latency مهم‌تر است یا consistency؟
 
-یعنی اول problem modeling بعد tool selection
+یعنی اول **problem modeling** بعد tool selection
 
-یک مثال واقعی: فرض کن می‌خواهیم سیستم notification مثل Instagram طراحی کنیم. یک ذهنیت بد: بیاییم Kafka استفاده کنیم چون همه استفاده می‌کنند. یک ذهنیت درست:ما peak داریم؟ ordering مهم است؟ delivery guarantee لازم است؟ fan-out چقدر است؟ بعد ابزار انتخاب می‌شود.
+**یک مثال واقعی**: فرض کن می‌خواهیم سیستم notification مثل Instagram طراحی کنیم. یک ذهنیت بد: بیاییم Kafka استفاده کنیم چون همه استفاده می‌کنند. یک ذهنیت درست:ما peak داریم؟ ordering مهم است؟ delivery guarantee لازم است؟ fan-out چقدر است؟ بعد ابزار انتخاب می‌شود.
 
 ## Decision Making & Technology Selection
 
@@ -20,9 +20,9 @@
 
 مثال: ساخت یک chat system  انتخاب‌ها:
 
-- REST API مزیت: ساده	معایب: realtime نیست
-- WebSocket مزیت: realtime	معایب: مدیریت connection سخت
-- MQTT مزیت: lightweight	معایب: infra خاص می‌خواهد
+- انتخاب REST API مزیت: ساده	معایب: realtime نیست
+- انتخاب WebSocket مزیت: realtime	معایب: مدیریت connection سخت
+- انتخاب MQTT مزیت: lightweight	معایب: infra خاص می‌خواهد
 
 هیچ گزینه‌ای بهترین مطلق نیست.  همیشه: context decides
 
