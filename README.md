@@ -1,6 +1,6 @@
 # System Design
 
-یادداشت‌های System Design.
+System Design Notes in Persian.
 
 ## Table of Contents
 
