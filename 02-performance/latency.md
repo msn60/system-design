@@ -1,6 +1,6 @@
-# Latency (مهم‌ترین مفهوم بک‌اندی)
+# تاخیر - Latency (مهم‌ترین مفهوم بک‌اندی)
 
-Latency یک عدد واحد نیست. اجزای Latency در Backend عموما به صورت زیر می‌باشد: 
+در نظر داشته باشید که Latency یک عدد واحد نیست. اجزای Latency در Backend عموما به صورت زیر می‌باشد: 
 
 ```
 Total Response Time = Network + Load Balancer + Auth + Application Logic + DB + Cache + External Services
@@ -13,13 +13,13 @@ Total Response Time = Network + Load Balancer + Auth + Application Logic + DB + 
 - کدام قابل بهینه‌سازی است؟ در‌واقع کدام بخش دست ماست و می‌توانیم روی آن تأثیر بگذاریم
 - کدام غیرقابل کنترل است؟ کدام دست ما نیست
 
-## Response Time، Latency و TTFB چه فرقی دارند؟
+## مقدارهای Response Time، Latency و TTFB چه فرقی دارند؟
 
 این سه مفهوم شبیه هم‌اند ولی دقیقاً یکی نیستند.
 
 ### Latency
 
-Latency معمولاً یعنی زمان رفت‌وبرگشت request تا response. در بک‌اند وقتی می‌گوییم latency، اغلب منظورمان این است:
+عموما Latency یعنی زمان رفت‌وبرگشت request تا response. در بک‌اند وقتی می‌گوییم latency، اغلب منظورمان این است:
 
 - Client sends request  
 - Server receives and processes
@@ -33,9 +33,9 @@ Latency معمولاً یعنی زمان رفت‌وبرگشت request تا resp
 - DB latency: زمان query دیتابیس
 - Network latency: زمان شبکه
 
-پس Latency یک واژه عمومی‌تر است. مثلاً می‌گویی: DB latency is high یا Network latency is high یا API latency P95 is 400ms. این  یعنی latency همیشه الزاماً فقط کل response نیست؛ می‌تواند latency یک بخش از سیستم هم باشد.
+پس Latency یک واژه عمومی‌تر است. مثلاً می گوییم: DB latency is high یا Network latency is high یا API latency P95 is 400ms. این  یعنی latency همیشه الزاماً فقط کل response نیست؛ می‌تواند latency یک بخش از سیستم هم باشد.
 
-Latency یک مفهوم عمومی برای اندازه‌گیری تاخیر در انجام یک عملیات است. این عملیات می‌تواند مربوط به کل API، شبکه، دیتابیس، کش، صف، سرویس داخلی یا یک dependency خارجی باشد.  بنابراین Latency فقط به زمان شروع پاسخ یا شروع پردازش محدود نمی‌شود، بلکه می‌تواند در هر نقطه‌ای از مسیر درخواست اندازه‌گیری شود. نمونه‌هایی از Latency عبارت‌اند از:
+عموما Latency یک مفهوم عمومی برای اندازه‌گیری تاخیر در انجام یک عملیات است. این عملیات می‌تواند مربوط به کل API، شبکه، دیتابیس، کش، صف، سرویس داخلی یا یک dependency خارجی باشد.  بنابراین Latency فقط به زمان شروع پاسخ یا شروع پردازش محدود نمی‌شود، بلکه می‌تواند در هر نقطه‌ای از مسیر درخواست اندازه‌گیری شود. نمونه‌هایی از Latency عبارت‌اند از:
 
 - Network Latency
 - Database Latency
@@ -48,7 +48,7 @@ Latency یک مفهوم عمومی برای اندازه‌گیری تاخیر �
 
 #### Network Latency
 
-Network Latency مربوط به تاخیر های شبکه‌ای قبل از رسیدن درخواست به اپلیکیشن یا هنگام برگشت پاسخ به کلاینت است. مهم‌ترین پارامترهای آن عبارت‌اند از:
+همواره Network Latency مربوط به تاخیر های شبکه‌ای قبل از رسیدن درخواست به اپلیکیشن یا هنگام برگشت پاسخ به کلاینت است. مهم‌ترین پارامترهای آن عبارت‌اند از:
 
 - RTT (Round Trip Time)
 - One-way Latency
@@ -69,7 +69,7 @@ Network Latency مربوط به تاخیر های شبکه‌ای قبل از ر
 
 #### Application Latency
 
-Application Latency مربوط به تاخیر هایی است که داخل اپلیکیشن رخ می‌دهد؛ یعنی بعد از اینکه request به سرویس رسیده، اما هنوز response آماده نشده است. نمونه‌هایی از Application Latency: 
+تاخیر اپلیکیشن یا Application Latency مربوط به تاخیر هایی است که داخل اپلیکیشن رخ می‌دهد؛ یعنی بعد از اینکه request به سرویس رسیده، اما هنوز response آماده نشده است. نمونه‌هایی از Application Latency: 
 
 - Queue Time
 - Handler Dispatch Time
@@ -108,7 +108,7 @@ Application Latency مربوط به تاخیر هایی است که داخل ا�
 
 ### Response Time
 
-Response Time معمولاً از دید کاربر یا کلاینت اندازه‌گیری می‌شود. یعنی: از لحظه ارسال request تا کامل دریافت شدن response (از وقتی کلاینت request را می‌فرستد تا وقتی کل response را دریافت می‌کند)
+مدت زمان پاسخ یا Response Time معمولاً از دید کاربر یا کلاینت اندازه‌گیری می‌شود. یعنی: از لحظه ارسال request تا کامل دریافت شدن response (از وقتی کلاینت request را می‌فرستد تا وقتی کل response را دریافت می‌کند)
 
 برای APIهای معمولی، latency و response time خیلی وقت‌ها تقریباً به‌جای هم استفاده می‌شوند. اما در سیستم‌های بزرگ‌تر ممکن است دقیق‌تر تفکیک شوند.
 
@@ -119,7 +119,7 @@ Response Time معمولاً از دید کاربر یا کلاینت انداز
 - Client parsing:      20ms
 - Total response time: 180ms
 
-Response Time کل زمان request/response از دید client است؛ از ارسال request تا دریافت آخرین بایت پاسخ. برای APIهای معمولی، Response Time معمولاً مهم‌ترین معیار user-facing است. مانند:
+بنابراین Response Time کل زمان request/response از دید client است؛ از ارسال request تا دریافت آخرین بایت پاسخ. برای APIهای معمولی، Response Time معمولاً مهم‌ترین معیار user-facing است. مانند:
 
 - POST /login
 
@@ -143,7 +143,7 @@ P95 Response Time < 800ms
 
 #### Total Response Time
 
-Total Response Time معیار پایه برای سنجش کامل شدن پاسخ است، اما باید مشخص شود از دید کدام نقطه اندازه‌گیری می‌شود:
+کل زمان پاسخ دهی Total Response Time معیار پایه برای سنجش کامل شدن پاسخ است، اما باید مشخص شود از دید کدام نقطه اندازه‌گیری می‌شود:
 
 - Client-observed Response Time
 - Gateway-observed Response Time
@@ -159,7 +159,7 @@ Total Response Time معیار پایه برای سنجش کامل شدن پاس
 
 #### Download Time
 
-Download Time فاصله‌ی بین دریافت اولین بایت و دریافت آخرین بایت response است. رابطه‌ی ساده: 
+زمان دانلود یا همان Download Time فاصله‌ی بین دریافت اولین بایت و دریافت آخرین بایت response است. رابطه‌ی ساده: 
 
 ```
 Download Time ≈ TTLB - TTFB
@@ -188,7 +188,7 @@ Download Time ≈ 2000ms
 
 ####  Server Processing Time
 
-Server Processing Time بخشی از Response Time است که داخل backend صرف پردازش request می‌شود. این زمان می‌تواند شامل موارد زیر باشد:
+زمان پردازش سرور یا Server Processing Time بخشی از Response Time است که داخل backend صرف پردازش request می‌شود. این زمان می‌تواند شامل موارد زیر باشد:
 
 - CPU Processing Time
 - Database Query Time
@@ -202,7 +202,7 @@ Server Processing Time بخشی از Response Time است که داخل backend 
 
 ### Time To First Byte یا TTFB
 
-TTFB مخفف Time To First Byte است و به زمانی گفته می‌شود که از لحظه‌ی ارسال request تا دریافت اولین بایت response توسط client طول می‌کشد. به بیان ساده: TTFB نشان می‌دهد سیستم چه زمانی شروع به پاسخ‌دهی کرده است.  نکته‌ی مهم این است که TTFB الزاماً فقط server processing time نیست. به عنوان نمونه این می تواند یک flow ساده ارسال درخواست باشد:
+عنوان TTFB مخفف Time To First Byte است و به زمانی گفته می‌شود که از لحظه‌ی ارسال request تا دریافت اولین بایت response توسط client طول می‌کشد. به بیان ساده: TTFB نشان می‌دهد سیستم چه زمانی شروع به پاسخ‌دهی کرده است.  نکته‌ی مهم این است که TTFB الزاماً فقط server processing time نیست. به عنوان نمونه این می تواند یک flow ساده ارسال درخواست باشد:
 
 - Client sends request
 - Network
@@ -244,7 +244,7 @@ TTFB = 340ms
 
 #### کاربردهای اصلی TTFB
 
-TTFB مخصوصاً در سناریوهایی اهمیت دارد که شروع پاسخ برای تجربه‌ی کاربر مهم‌تر از کامل شدن کل پاسخ است. نمونه‌ها:
+عموما TTFB مخصوصاً در سناریوهایی اهمیت دارد که شروع پاسخ برای تجربه‌ی کاربر مهم‌تر از کامل شدن کل پاسخ است. نمونه‌ها:
 
 - Web Pages
 - Streaming APIs
@@ -271,9 +271,9 @@ TTFB مخصوصاً در سناریوهایی اهمیت دارد که شروع 
 
 در این حالت، مشکل احتمالاً در upstream service است، نه خود gateway. 
 
-#### Serialization Latency و اثر آن بر TTFB
+#### نقش Serialization Latency و اثر آن بر TTFB
 
-Serialization Latency زمانی است که سیستم برای آماده‌سازی اولین خروجی قابل ارسال صرف می‌کند؛ مثلاً تبدیل struct به JSON.اگر backend مجبور باشد کل response را در memory بسازد و سپس آن را serialize کند، TTFB ممکن است بالا برود.
+عموما Serialization Latency زمانی است که سیستم برای آماده‌سازی اولین خروجی قابل ارسال صرف می‌کند؛ مثلاً تبدیل struct به JSON.اگر backend مجبور باشد کل response را در memory بسازد و سپس آن را serialize کند، TTFB ممکن است بالا برود.
 
 طراحی اول:
 
@@ -295,9 +295,9 @@ Serialization Latency زمانی است که سیستم برای آماده‌س
 
 اگر بخواهیم تفاوت اصلی این سه را در یک جمله خلاصه کنیم: 
 
-- Latency: تاخیر در یک مسیر یا بخش از سیستم، مفهوم عمومی‌تر (برای تحلیل تاخیر در هر بخش از سیستم استفاده می‌شود)
-- Response Time: کل زمان کامل شدن پاسخ از دید کلاینت(برای فهمیدن اینکه کل پاسخ چه زمانی کامل می‌شود استفاده می‌شود)
-- TTFB: زمان رسیدن اولین byte پاسخ به کلاینت (برای فهمیدن اینکه پاسخ‌دهی چه زمانی شروع می‌شود استفاده می‌شود)
+- تاخیر - Latency: تاخیر در یک مسیر یا بخش از سیستم، مفهوم عمومی‌تر (برای تحلیل تاخیر در هر بخش از سیستم استفاده می‌شود)
+- زمان پاسخ - Response Time: کل زمان کامل شدن پاسخ از دید کلاینت(برای فهمیدن اینکه کل پاسخ چه زمانی کامل می‌شود استفاده می‌شود)
+- زمان TTFB: زمان رسیدن اولین byte پاسخ به کلاینت (برای فهمیدن اینکه پاسخ‌دهی چه زمانی شروع می‌شود استفاده می‌شود)
 
 فرض کن این API را داریم:
 
@@ -352,9 +352,9 @@ P95 response time for GET /feed should be under 500ms.
 
 اینجا مهم است کاربر چقدر منتظر می‌ماند.
 
-وقتی می خواهیم  bottleneck پیدا می‌کنیم: Latency 
+وقتی می خواهیم  bottleneck پیدا می‌کنیم: **Latency** 
 
-Latency برای تحلیل داخلی سیستم بهتر است. در واقع برای debugging و bottleneck analysis استفاده می‌شود. مثلاً:
+عموما Latency برای تحلیل داخلی سیستم بهتر است. در واقع برای debugging و bottleneck analysis استفاده می‌شود. مثلاً:
 
 - DB latency increased from 20ms to 200ms.
 - Redis latency is stable.
@@ -371,7 +371,7 @@ Latency برای تحلیل داخلی سیستم بهتر است. در واقع
 
 وقتی response بزرگ، دانلود فایل، streaming یا web page داری: TTFB
 
-TTFB مخصوصاً وقتی مهم است که:
+زمان TTFB مخصوصاً وقتی مهم است که:
 
 - response بزرگ است
 - فایل دانلود می‌شود
