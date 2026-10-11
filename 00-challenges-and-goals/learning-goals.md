@@ -1,3 +1,5 @@
+<div dir="rtl" align="right">
+
 # هدف نهایی یادگیری System Design
 
  برای تبدیل شدن به یک مهندس قوی در System Design چه ذهنیت و چه دانش‌هایی لازم است
@@ -41,3 +43,6 @@
 - اگر 100M notification/day شد چه؟
 - اگر queue پر شد چه؟
 - اگر worker crash کرد چه؟
+
+
+</div>
