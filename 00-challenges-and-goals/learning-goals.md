@@ -32,9 +32,13 @@
 
 سیستم دیزاین معمولاً نقطه تفاوت این‌هاست: 
 
+</div>
+
 - Mid-level engineer
 - Senior engineer
 - Staff engineer
+
+<div dir="rtl" align="right">
 
 فرق اصلی-  میدلول: feature implementation – سینیور: system ownership -  architecture decisions   - scalability planning
 
