@@ -4,9 +4,9 @@
 
 ## Open Telemetry
 
-OpenTelemetry برای جمع‌آوری metrics، logs و traces به‌صورت استاندارد استفاده می‌شود. با Open Telemetry می‌توان مشاهده کرد که: 
+ابزار OpenTelemetry برای جمع‌آوری metrics، logs و traces به‌صورت استاندارد استفاده می‌شود. با Open Telemetry می‌توان مشاهده کرد که: 
 
-- Request وارد کدام سرویس شده است.
+- اینکه Request وارد کدام سرویس شده است.
 - در هر سرویس چقدر زمان مصرف شده است.
 - کدام DB query کند بوده است.
 - کدام external call باعث delay شده است.
@@ -14,7 +14,7 @@ OpenTelemetry برای جمع‌آوری metrics، logs و traces به‌صور�
 
 ## Prometheus Histogram Metrics
 
-Prometheus Histogram برای اندازه‌گیری duration ها و محاسبه‌ی percentile ها بسیار کاربردی است. نمونه‌ی متریک‌های رایج:
+ابزار Prometheus Histogram برای اندازه‌گیری duration ها و محاسبه‌ی percentile ها بسیار کاربردی است. نمونه‌ی متریک‌های رایج:
 
 - http_request_duration_seconds_bucket
 - http_request_duration_seconds_sum
@@ -24,7 +24,7 @@ Prometheus Histogram برای اندازه‌گیری duration ها و محاس�
 
 ## Jaeger Tracing
 
-Jaeger برای distributed tracing استفاده می‌شود و کمک می‌کند مسیر یک request در چند سرویس مختلف بررسی شود. مثال برای endpoint زیر: GET /feed ممکن است trace به شکل زیر باشد:
+ابزار Jaeger برای distributed tracing استفاده می‌شود و کمک می‌کند مسیر یک request در چند سرویس مختلف بررسی شود. مثال برای endpoint زیر: GET /feed ممکن است trace به شکل زیر باشد:
 
 - API Gateway:        20ms
 - Feed Service:      400ms
