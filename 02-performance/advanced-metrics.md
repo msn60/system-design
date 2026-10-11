@@ -1,3 +1,6 @@
+<div dir="rtl" align="right">
+
+
 # معیارهای پیشرفته Performance برای سیستم‌های بزرگ
 
 در سیستم‌های production و scale بالا، فقط دانستن یک عدد برای latency یا response time کافی نیست. باید رفتار سیستم در درصدهای مختلف، زیر بار بالا و در شرایط ناپایدار بررسی شود. 
@@ -10,8 +13,12 @@
 
 نمونه‌ی SLO حرفه‌ای:
 
+</div>
+
 - P95 Response Time for read APIs should be under 300ms.
 - P99 Response Time for payment authorization should be under 1s.
+
+<div dir="rtl" align="right">
 
 ## Jitter
 
@@ -43,6 +50,8 @@ Jitter مخصوصاً در سیستم‌های زیر اهمیت زیادی دا
 
 Queue Depth یکی از مهم‌ترین نشانه‌های فشار روی سیستم است. در بسیاری از موارد، قبل از اینکه سیستم error بدهد یا crash کند، ابتدا queueها شروع به رشد می‌کنند. متریک‌های مهم در این بخش عبارت‌اند از:
 
+</div>
+
 - Request Queue Length
 - Worker Pool Queue Length
 - Thread Pool Saturation
@@ -50,6 +59,8 @@ Queue Depth یکی از مهم‌ترین نشانه‌های فشار روی س
 - DB Connection Pool Wait Count
 - Kafka Consumer Lag
 - RabbitMQ Queue Depth
+
+<div dir="rtl" align="right">
 
 برای مثال، اگر RPS ثابت باشد اما goroutine count، memory usage و queue length به‌تدریج رشد کند، احتمالاً requestها در سیستم گیر کرده‌اند و concurrency در حال افزایش است.
 
@@ -60,6 +71,8 @@ Throughput به‌تنهایی برای ارزیابی performance کافی نی
 **The service can handle 5000 RPS with P95 Response Time under 300ms.**
 
 زیرا ممکن است سیستم 5000 RPS دریافت کند، اما response time آن به ۱۰ ثانیه برسد. چنین سیستمی از نظر performance قابل قبول نیست. نمونه‌ی تحلیل ظرفیت:
+
+</div>
 
 - At 1000 RPS: P95 = 120ms
 - At 3000 RPS: P95 = 250ms
