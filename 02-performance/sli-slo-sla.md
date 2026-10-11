@@ -17,11 +17,11 @@
 
 هستند.
 
-## 1) SLI چیست؟
+## 1) مفهوم SLI چیست؟
 
 ### تعریف دقیق
 
-SLI یک معیار کمی و قابل اندازه‌گیری است که کیفیت واقعی تجربه کاربران از یک سرویس را نشان می‌دهد.
+در واقع SLI یک معیار کمی و قابل اندازه‌گیری است که کیفیت واقعی تجربه کاربران از یک سرویس را نشان می‌دهد.
 
 نکته مهم:هر `Metric` ای `SLI` نیست، اما هر `SLI` یک `Metric` است`.`
 
@@ -60,14 +60,14 @@ SLI یک معیار کمی و قابل اندازه‌گیری است که کی�
 
 معمولاً operational metrics هستند، نه SLI. 
 
-### Mental Model مهم
+### یک Mental Model مهم
 
 به این شکل نگاه کن:
 
-- Metrics:  تمام داده‌های سیستم
-- SLIs: مهم‌ترین metricهایی که کیفیت واقعی سرویس را نشان می‌دهند
-- SLOs: هدف مورد انتظار برای آن کیفیت
-- SLAs: تعهد تجاری/حقوقی بر اساس آن کیفیت
+- متریک ها - Metrics:  تمام داده‌های سیستم
+- مقادیر SLIs: مهم‌ترین metricهایی که کیفیت واقعی سرویس را نشان می‌دهند
+- مقادیر SLOs: هدف مورد انتظار برای آن کیفیت
+- مقادیر SLAs: تعهد تجاری/حقوقی بر اساس آن کیفیت
 
 ## 2) چرا SLI مهم است؟
 
@@ -76,9 +76,9 @@ SLI یک معیار کمی و قابل اندازه‌گیری است که کی�
 - نمی‌توان فهمید سیستم واقعاً سالم است یا نه
 - نمی‌توان کیفیت سرویس را اندازه‌گیری کرد
 - نمی‌توان reliability را مدیریت کرد
-- alerting معنی‌دار ممکن نیست
-- capacity planning دشوار می‌شود
-- SLO و SLA قابل تعریف نیستند
+- هشداردهی یا alerting معنی‌دار ممکن نیست
+- برنامه ریزی برای ظرفیت یا capacity planning دشوار می‌شود
+- بدون آن، SLO و SLA قابل تعریف نیستند
 
 در واقع: You cannot improve what you cannot measure. SLI .در واقع SLI اطلاعات فنی، واقعی و measurable از رفتار سیستم ارائه می‌دهد.
 
@@ -109,14 +109,11 @@ SLI یک معیار کمی و قابل اندازه‌گیری است که کی�
 
 ### 3.2) Availability SLIs
 
-Availability فقط به معنی up بودن سرور نیست. ممکن است:  سرویس پاسخ دهد  ولی بسیار کند باشد. از دید کاربر، این هنوز failure است. معمولاً availability بر اساس:Good Requests / Total Valid Requests محاسبه می‌شود.
+در دسترس بودن یا Availability فقط به معنی up بودن سرور نیست. ممکن است:  سرویس پاسخ دهد  ولی بسیار کند باشد. از دید کاربر، این هنوز failure است. معمولاً availability بر اساس:Good Requests / Total Valid Requests محاسبه می‌شود.
 
 مثال Good Request
 
-- request is good if:
-- \- status < 500
-- AND
-- \- latency < 300ms
+- request is good if: status < 500  AND  latency < 300ms
 
 **مثال SLI – در این سرویس 99.9% از request ها باید successful و زیر 300ms باشند.**
 
@@ -132,7 +129,7 @@ Availability فقط به معنی up بودن سرور نیست. ممکن است
 
 ### 3.4) Throughput SLIs
 
-Throughput همیشه SLI نیست. گاهی فقط capacity metric است. اما اگر مستقیماً تجربه کاربر را تحت تاثیر قرار دهد، می‌تواند SLI باشد. مثال:
+توان عملیاتی یا Throughput همیشه SLI نیست. گاهی فقط capacity metric است. اما اگر مستقیماً تجربه کاربر را تحت تاثیر قرار دهد، می‌تواند SLI باشد. مثال:
 
 - message processing rate
 - streaming throughput
@@ -150,9 +147,9 @@ Throughput همیشه SLI نیست. گاهی فقط capacity metric است. ام
 
 مثال: 95% از eventها باید زیر 5 ثانیه پردازش شوند.
 
-## 4) SLO چیست؟
+## 4) معنی SLO چیست؟
 
-SLO هدفی است که برای SLI تعیین می‌کنیم. مثال SLI:  P95 latency = 180 ms و SLO: P95 latency باید کمتر از 200ms باشد. 
+مفهوم SLO هدفی است که برای SLI تعیین می‌کنیم. مثال SLI:  P95 latency = 180 ms و SLO: P95 latency باید کمتر از 200ms باشد. 
 
 **نکته مهم**: SLI = چیزی که اندازه می‌گیریم و SLO = هدفی که می‌خواهیم به آن برسیم
 
@@ -162,17 +159,19 @@ SLO هدفی است که برای SLI تعیین می‌کنیم. مثال SLI: 
 
 مثال واقعی - اگر error budget تمام شود:  deploy متوقف می‌شود. release freeze انجام می‌شود. تمرکز روی reliability می‌رود. این در Google SRE بسیار مهم است.
 
-## 5) SLA چیست؟
+## 5) معنی SLA چیست؟
 
-**SLA یک تعهد رسمی و تجاری بر اساس SLO است**. معمولاً شامل:
+**مفهوم SLA یک تعهد رسمی و تجاری بر اساس SLO است**. معمولاً شامل:
 
-- target ها
+- اهداف یا همان target ها
 - جریمه مالی
 - نحوه اندازه‌گیری
-- maintenance window
-- exclusions
+- بازه زمانی تعمیر و نگهداری یا maintenance window
+- موارد استثنا یا exclusions
 
-مثال:  99.95% monthly availability , otherwise the customer receives service credits.
+مثال:
+
+  99.95% monthly availability , otherwise the customer receives service credits.
 
 تفاوت اصلی
 
@@ -184,7 +183,7 @@ SLO هدفی است که برای SLI تعیین می‌کنیم. مثال SLI: 
 
 فرض کن سرویسی داری: GET /api/v1/users/{id}
 
-**SLI های مناسب**
+**انتخاب SLI های مناسب**
 
 - User-facing SLIs
 - Latency
@@ -316,7 +315,7 @@ Internal Operational Metrics
 
 ### اشتباه سوم
 
-SLI ها را بدون context workload بررسی می‌کنند. مثلاً: P95 = 80ms بدون دانستن:
+عموما SLI ها را بدون context workload بررسی می‌کنند. مثلاً: P95 = 80ms بدون دانستن:
 
 - payload size
 - concurrency
