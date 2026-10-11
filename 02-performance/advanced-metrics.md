@@ -22,14 +22,21 @@
 
 ## Jitter
 
-Jitter یعنی نوسان latency در طول زمان. برای مثال، سیستم زیر رفتار پایدارتر و قابل‌پیش‌بینی‌تری دارد: 
+در واقع Jitter یعنی نوسان latency در طول زمان. برای مثال، سیستم زیر رفتار پایدارتر و قابل‌پیش‌بینی‌تری دارد: 
 
-- 100ms
-- 110ms
-- 95ms
-- 105ms
+
+<ul dir="rtl">
+  <li>100ms</li>
+  <li>110ms</li>
+  <li>95ms</li>
+  <li>105ms</li>
+
+</ul>
 
 اما سیستم زیر با وجود اینکه ممکن است میانگین مشابهی داشته باشد، تجربه‌ی بدتری ایجاد می‌کند:
+
+</div>
+
 
 - 30ms
 - 40ms
@@ -37,7 +44,11 @@ Jitter یعنی نوسان latency در طول زمان. برای مثال، س�
 - 50ms
 - 1200ms
 
+<div dir="rtl" align="right">
+
 Jitter مخصوصاً در سیستم‌های زیر اهمیت زیادی دارد:
+
+</div>
 
 - Real-time Messaging
 - Voice / Video Call
@@ -45,6 +56,8 @@ Jitter مخصوصاً در سیستم‌های زیر اهمیت زیادی دا
 - Trading Systems
 - IoT
 - Robotics
+
+<div dir="rtl" align="right">
 
 ## Queue Depth Metrics
 
