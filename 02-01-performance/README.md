@@ -2,6 +2,7 @@
 
 - [Performance](performance.md)
 - [Latency](latency.md)
+- [Throughput & Capacity](throughput-and-capacity.md)
 - [Percentile-based Thinking](percentiles.md)
 - [Performance Advance metrics](advanced-metrics.md)
 - [Performance Measurement Tools](measurement-tools.md)
@@ -12,5 +13,3 @@
 - [SLO / SLA Template](slo-sla-template.md)
 - [Load Testing from an Engineering Perspective](load-testing.md)
 - [Release Readiness Checklist](release-readiness-checklist.md)
-- [Performance Pattern 1: Connection Pooling](connection-pooling.md)
-- [Throughput & Capacity](throughput-and-capacity.md)
