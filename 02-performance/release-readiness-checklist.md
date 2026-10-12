@@ -1,50 +1,66 @@
-# Release Readiness Checklist
+<div dir="rtl" align="right">
 
-قبل از release باید مشخص باشد: 
+<h1 dir="rtl" align="right">Release Readiness Checklist</h1>
 
-## Reliability
+<p dir="rtl" align="right">قبل از release باید مشخص باشد:</p>
 
-- SLO تعریف شده؟
-- alert ها meaningful هستند؟
-- rollback plan وجود دارد؟
-- canary strategy آماده است؟
+<h2 dir="rtl" align="right">Reliability</h2>
 
-## Database
+<ul dir="rtl">
+  <li>SLO تعریف شده؟</li>
+  <li>alert ها meaningful هستند؟</li>
+  <li>rollback plan وجود دارد؟</li>
+  <li>canary strategy آماده است؟</li>
+</ul>
 
-- query plan بررسی شده؟
-- migration rollback-safe است؟
-- index ها validate شده‌اند؟
+<h2 dir="rtl" align="right">Database</h2>
 
-## Performance
+<ul dir="rtl">
+  <li>query plan بررسی شده؟</li>
+  <li>migration rollback-safe است؟</li>
+  <li>index ها validate شده‌اند؟</li>
+</ul>
 
-- p95/p99 acceptable است؟
-- peak traffic تست شده؟
-- capacity limit مشخص است؟
+<h2 dir="rtl" align="right">Performance</h2>
 
-## Dependency Safety
+<ul dir="rtl">
+  <li>p95/p99 acceptable است؟</li>
+  <li>peak traffic تست شده؟</li>
+  <li>capacity limit مشخص است؟</li>
+</ul>
 
-- timeout تنظیم شده‌اند؟
-- retry policy امن است؟
-- circuit breaker وجود دارد؟
-- fallback behavior تست شده؟
+<h2 dir="rtl" align="right">Dependency Safety</h2>
 
-خلاصه مبحث Performance
+<ul dir="rtl">
+  <li>timeout تنظیم شده‌اند؟</li>
+  <li>retry policy امن است؟</li>
+  <li>circuit breaker وجود دارد؟</li>
+  <li>fallback behavior تست شده؟</li>
+</ul>
 
-Performance engineering در backend فقط درباره “کم کردن latency” نیست. بلکه درباره: 
+<p dir="rtl" align="right">خلاصه مبحث Performance</p>
 
-- predictability
-- stability
-- scalability
-- graceful degradation
-- observability
-- saturation control
-- resilience under load
+<p dir="rtl" align="right">Performance engineering در backend فقط درباره “کم کردن latency” نیست. بلکه درباره:</p>
 
-است. سیستم production-grade باید:
+<ul dir="rtl">
+  <li>predictability</li>
+  <li>stability</li>
+  <li>scalability</li>
+  <li>graceful degradation</li>
+  <li>observability</li>
+  <li>saturation control</li>
+  <li>resilience under load</li>
+</ul>
 
-- تحت workload واقعی قابل پیش‌بینی بماند،
-- tail latency کنترل‌شده داشته باشد،
-- failure را isolate کند،
-- و هنگام overload به‌صورت کنترل‌شده degrade شود، نه اینکه collapse کند.
+<p dir="rtl" align="right">است. سیستم production-grade باید:</p>
 
-از بخش به بعد در مورد Pattern ها و Anti pattern های performance صحبت می‌کنیم: 
+<ul dir="rtl">
+  <li>تحت workload واقعی قابل پیش‌بینی بماند،</li>
+  <li>tail latency کنترل‌شده داشته باشد،</li>
+  <li>failure را isolate کند،</li>
+  <li>و هنگام overload به‌صورت کنترل‌شده degrade شود، نه اینکه collapse کند.</li>
+</ul>
+
+<p dir="rtl" align="right">از بخش به بعد در مورد Pattern ها و Anti pattern های performance صحبت می‌کنیم:</p>
+
+</div>
