@@ -6,11 +6,15 @@
 
 رفتار سیستم باید تحت workload های مختلف قابل پیش‌بینی باشد. سیستمی که:  یک بار 50ms و بار دیگر 5s پاسخ می‌دهد، حتی اگر average خوبی داشته باشد، از دید production system سالم محسوب نمی‌شود. Predictability مهم است زیرا: 
 
-- timeoutها قابل تنظیم نیستند
-- retry storm ایجاد می‌شود
-- queue buildup رخ می‌دهد
-- autoscaling تصمیم اشتباه می‌گیرد
-- tail latency انفجاری می‌شود
+
+<ul dir="rtl">
+  <li>timeoutها قابل تنظیم نیستند</li>
+  <li>retry storm ایجاد می‌شود</li>
+  <li>queue buildup رخ می‌دهد</li>
+  <li>autoscaling تصمیم اشتباه می‌گیرد</li>
+  <li>tail latency انفجاری می‌شود</li>
+</ul>
+
 
 در سیستم‌های distributed، نوسان latency اغلب خطرناک‌تر از latency متوسط بالا است. 
 
@@ -18,20 +22,24 @@
 
 سیستم باید بتواند با رشد: تعداد کاربران، حجم داده، concurrency،  request rate همچنان behavior قابل قبولی حفظ کند. Scalability فقط به معنی “سرور بیشتر” نیست. بسیاری از bottleneckها با scale افقی حل نمی‌شوند:
 
-- database contention
-- distributed lock contention
-- hot partitions
-- queue saturation
-- cache stampede
-- fan-out explosion
+<ul dir="rtl">
+  <li>database contention</li>
+  <li>distributed lock contention</li>
+  <li>hot partitions</li>
+  <li>queue saturation</li>
+  <li>cache stampede</li>
+  <li>fan-out explosion</li>
+</ul>
 
 به همین دلیل scalability باید در سطح:
 
-- architecture
-- data model
-- caching strategy
-- partitioning
-- dependency management
+<ul dir="rtl">
+  <li>architecture</li>
+  <li>data model</li>
+  <li>caching strategy</li>
+  <li>partitioning</li>
+  <li>dependency management</li>
+</ul>
 
 طراحی شود.
 
@@ -39,10 +47,12 @@
 
 سیستمی که قابل مشاهده نباشد، قابل بهینه‌سازی نیست. در production، تنها دانستن اینکه latency بالا رفته، کافی نیست. باید بتوان تشخیص داد:
 
-- کدام dependency کند شده
-- queue کجا buildup کرده
-- کدام query باعث tail latency شده
-- آیا bottleneck از CPU است یا IO یا lock contention
+<ul dir="rtl">
+  <li>کدام dependency کند شده</li>
+  <li>queue کجا buildup کرده</li>
+  <li>کدام query باعث tail latency شده</li>
+  <li>آیا bottleneck از CPU است یا IO یا lock contention</li>
+</ul>
 
  سه ستون اصلی Observability عبارتند از: 
 
@@ -50,26 +60,32 @@
 
 برای: 
 
-- latency
-- throughput
-- saturation
-- error rate
+<ul dir="rtl">
+  <li>latency</li>
+  <li>throughput</li>
+  <li>saturation</li>
+  <li>error rate</li>
+</ul>
 
 ### Logs
 
 برای:
 
-- debugging
-- correlation
-- incident analysis
+<ul dir="rtl">
+  <li>debugging</li>
+  <li>correlation</li>
+  <li>incident analysis</li>
+</ul>
 
 ### Distributed Tracing
 
 برای:
 
-- request path analysis
-- identifying slow spans
-- dependency timing breakdown
+<ul dir="rtl">
+  <li>request path analysis</li>
+  <li>identifying slow spans</li>
+  <li>dependency timing breakdown</li>
+</ul>
 
 ## 4. مقاوم بودن تحت فشار (Resilience Under Load)
 

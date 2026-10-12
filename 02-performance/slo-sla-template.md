@@ -1,43 +1,55 @@
-# SLO / SLA Template 
+<div dir="rtl" align="right">
 
-## Scope
+<h1 dir="rtl" align="right">SLO / SLA Template</h1>
 
-باید دقیق مشخص شود:
+<h2 dir="rtl" align="right">Scope</h2>
 
-- چه endpoint هایی داخل scope هستند
-- measurement از کجا انجام می‌شود
-- چه trafficی excluded است
+<p dir="rtl" align="right">باید دقیق مشخص شود:</p>
 
-## SLI ها
+<ul dir="rtl">
+  <li>چه endpoint هایی داخل scope هستند</li>
+  <li>measurement از کجا انجام می‌شود</li>
+  <li>چه trafficی excluded است</li>
+</ul>
 
-معمولاً:
+<h2 dir="rtl" align="right">SLI ها</h2>
 
-- availability
-- latency
-- error rate
-- freshness
-- saturation
+<p dir="rtl" align="right">معمولاً:</p>
 
-## SLO ها
+<ul dir="rtl">
+  <li>availability</li>
+  <li>latency</li>
+  <li>error rate</li>
+  <li>freshness</li>
+  <li>saturation</li>
+</ul>
 
-باید: 
+<h2 dir="rtl" align="right">SLO ها</h2>
 
-- measurable
-- realistic
-- business-aligned
+<p dir="rtl" align="right">باید:</p>
 
-باشند.
+<ul dir="rtl">
+  <li>measurable</li>
+  <li>realistic</li>
+  <li>business-aligned</li>
+</ul>
 
-## Error Budget
+<p dir="rtl" align="right">باشند.</p>
 
-بخش بسیار مهمی که اغلب فراموش می‌شود. مثلاً: 99.9% availability یعنی حدود 43 دقیقه downtime در ماه
+<h2 dir="rtl" align="right">Error Budget</h2>
 
-### Policy مهم
+<p dir="rtl" align="right">بخش بسیار مهمی که اغلب فراموش می‌شود. مثلاً: 99.9% availability یعنی حدود 43 دقیقه downtime در ماه</p>
 
-اگر error budget سریع مصرف شود:
+<h3 dir="rtl" align="right">Policy مهم</h3>
 
-- release freeze
-- rollback
-- incident review
+<p dir="rtl" align="right">اگر error budget سریع مصرف شود:</p>
 
-باید فعال شوند.
+<ul dir="rtl">
+  <li>release freeze</li>
+  <li>rollback</li>
+  <li>incident review</li>
+</ul>
+
+<p dir="rtl" align="right">باید فعال شوند.</p>
+
+</div>
