@@ -41,3 +41,4 @@ System Design Notes in Persian.
 - [Batching and Pagination](02-04-batching-and-pagination/README.md)
   - [Batching](02-04-batching-and-pagination/batching.md)
   - [Pagination](02-04-batching-and-pagination/pagination.md)
+- [Data Compression](02-05-data-compression/data-compression-performance-pattern.md)
