@@ -578,8 +578,18 @@ func streamHandler(w http.ResponseWriter, r *http.Request) {
 <ul dir="rtl">
   <li>کلاینت باید بتواند داده را تکه‌تکه پردازش کند (مثلاً NDJSON یا SSE). برای یک JSON آرایه‌ای معمولی که کلاینت باید کامل بگیرد، این روش فایده‌ای ندارد.</li>
   <li>خطا بعد از ارسال اولین بایت سخت‌تر مدیریت می‌شود، چون status code قبلاً ارسال شده است (معمولاً 200) و دیگر نمی‌شود آن را عوض کرد.</li>
-  <li>فایل کامل و قابل اجرای این مثال (شامل middleware ای که زمان اولین Write را در سمت سرور ثبت می‌کند و client اندازه‌گیر) جدا ارائه می‌شود. پیشنهاد مسیر: <code>examples/latency-ttfb/main.go</code>&rlm;.</li>
+  <li>فایل کامل و قابل اجرای این مثال (شامل middleware ای که زمان اولین Write را در سمت سرور ثبت می‌کند و client اندازه‌گیر) در <a href="examples/latency-ttfb/main.go">examples/latency-ttfb/main.go</a> است. توضیح اجرا و آزمایش‌های پیشنهادی در <a href="examples/latency-ttfb/README.md">README همان پوشه</a> آمده است.</li>
 </ul>
+
+<p dir="rtl" align="right">برای اجرا، از ریشه‌ی ریپو این دستور را بزنید:</p>
+
+<div dir="ltr" align="left">
+
+```bash
+go run ./02-01-performance/examples/latency-ttfb
+```
+
+</div>
 
 <h3 dir="rtl" align="right">جمع‌بندی:</h3>
 
